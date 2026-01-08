@@ -5,14 +5,6 @@ Este projeto é a implementação do desafio técnico de Frontend proposto pela 
 O objetivo é criar uma aplicação simples de cadastro, com validações, persistência em `localStorage` e navegação entre telas.
 
 
-## 🌐 Demo
-
-A aplicação está publicada via **GitHub Pages** e pode ser acessada no link abaixo:
-
-👉 https://assispaola.github.io/evo-abcfitness/#/
-
-
-
 ## 🧩 Funcionalidades
 
 - Tela de **Cadastro**
