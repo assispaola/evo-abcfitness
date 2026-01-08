@@ -11,7 +11,7 @@
           <input id="name" type="text" formControlName="name" placeholder="Digite seu nome" />
 
           <!-- Mensagens de erro do nome -->
-          @if (name?.invalid && submitted) {
+          @if (name?.invalid && (submitted || name?.touched)) {
           <small class="error">
             @if (name?.errors?.['required']) {
             <span>Nome é obrigatório.</span>
@@ -33,12 +33,12 @@
           />
 
           <!-- Mensagens de erro do email -->
-          @if (email?.invalid && submitted) {
+          @if (email?.invalid && (submitted || email?.touched)) {
           <small class="error">
             @if (email?.errors?.['required']) {
             <span>E-mail é obrigatório.</span>
             } @if (email?.errors?.['email']) {
-            <span>E-mail inválido.</span>
+            <span>E-mail inválido. EX: carlos@uol.com.br</span>
             }
           </small>
           }
@@ -55,7 +55,7 @@
           />
 
           <!-- Mensagens de erro da senha -->
-          @if (password?.invalid && submitted) {
+          @if (password?.invalid && (submitted || password?.touched)) {
           <small class="error">
             @if (password?.errors?.['required']) {
             <span>Senha é obrigatória.</span>
