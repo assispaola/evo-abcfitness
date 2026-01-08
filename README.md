@@ -9,7 +9,7 @@ O objetivo é criar uma aplicação simples de cadastro, com validações, persi
 
 A aplicação está publicada via **GitHub Pages** e pode ser acessada no link abaixo:
 
-👉 https://assispaola.github.io/evo-abcfitness/
+👉 https://assispaola.github.io/evo-abcfitness/#/
 
 
 
