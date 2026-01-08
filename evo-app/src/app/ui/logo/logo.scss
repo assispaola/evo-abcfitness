@@ -1,0 +1,24 @@
+.navbar {
+  height: 3.75rem;
+  display: flex;
+  padding: 0 20px;
+  background-color: #5e35b1;
+}
+
+.box-logo {
+  max-width: 520px;
+  display: flex;
+  margin: 0;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.navbar-logo {
+  max-width: 520px;
+  display: flex;
+  align-items: left;
+}
+
+.navbar-logo img {
+  height: 30px;
+}

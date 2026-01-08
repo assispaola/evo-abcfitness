@@ -1,0 +1,75 @@
+<div class="container box-body">
+  <div class="row align-items-center">
+    <div class="col">
+      <!-- Formulário de cadastro -->
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h1 class="title">Cadastro</h1>
+
+        <!-- NOME -->
+        <div class="form-field">
+          <label for="name">Nome:</label>
+          <input id="name" type="text" formControlName="name" placeholder="Digite seu nome" />
+
+          <!-- Mensagens de erro do nome -->
+          @if (name?.invalid && submitted) {
+          <small class="error">
+            @if (name?.errors?.['required']) {
+            <span>Nome é obrigatório.</span>
+            } @if (name?.errors?.['pattern']) {
+            <span>Use apenas letras.</span>
+            }
+          </small>
+          }
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-field">
+          <label for="email">E-mail:</label>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            placeholder="EX: carlos@uol.com.br"
+          />
+
+          <!-- Mensagens de erro do email -->
+          @if (email?.invalid && submitted) {
+          <small class="error">
+            @if (email?.errors?.['required']) {
+            <span>E-mail é obrigatório.</span>
+            } @if (email?.errors?.['email']) {
+            <span>E-mail inválido.</span>
+            }
+          </small>
+          }
+        </div>
+
+        <!-- SENHA -->
+        <div class="form-field">
+          <label for="password">Senha:</label>
+          <input
+            id="password"
+            type="password"
+            formControlName="password"
+            placeholder="Sua senha precisa ter pelo menos 8 caracteres"
+          />
+
+          <!-- Mensagens de erro da senha -->
+          @if (password?.invalid && submitted) {
+          <small class="error">
+            @if (password?.errors?.['required']) {
+            <span>Senha é obrigatória.</span>
+            } @if (password?.errors?.['minlength']) {
+            <span>Mínimo de 8 caracteres.</span>
+            }
+          </small>
+          }
+        </div>
+        <!-- Botão de envio -->
+        <div class="btn-submit">
+          <button type="submit" [disabled]="form.invalid">SALVAR</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

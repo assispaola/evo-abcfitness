@@ -1,0 +1,25 @@
+<div class="container box-body">
+  <div class="row align-items-center">
+    <div class="col">
+      <h1 class="title">Informações</h1>
+
+      <div class="details">
+        <!-- Nome -->
+        <p class="label-details">Nome</p>
+        <p>
+          <strong>{{ user.name }}</strong>
+        </p>
+
+        <!-- E-mail -->
+        <p class="label-details">E-mail</p>
+        <p>
+          <strong>{{ user.email }}</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Botão de voltar -->
+  <div class="btn-back">
+    <button (click)="goBack()">Voltar</button>
+  </div>
+</div>
